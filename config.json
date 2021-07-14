@@ -2,6 +2,10 @@
   "language": "javascript",
   "test-state": "false",
   "findings": {
-    "total": "20"
+    "total": "20",
+    "critical": "",
+    "high": "",
+    "medium": "",
+    "low": ""
   }
 }
