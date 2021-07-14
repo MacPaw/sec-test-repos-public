@@ -1,5 +1,11 @@
 {
   "language": "python",
   "test-state": "false",
-  "findings": "14"
+  "findings": {
+    "total": "14",
+    "critical": "",
+    "high": "",
+    "medium": "",
+    "low": ""
+  }
 }
