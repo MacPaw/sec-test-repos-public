@@ -1,5 +1,11 @@
 {
   "language": "javascript",
   "test-state": "false",
-  "findings": "20"
+  "findings": {
+    "total": "146",
+    "high": "95",
+    "very_high": "17",
+    "normal": "29",
+    "low": "5"
+  }
 }
