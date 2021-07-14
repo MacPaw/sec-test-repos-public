@@ -1,5 +1,11 @@
 {
   "language": "",
   "test-state": "",
-  "findings": ""
+  "findings": {
+    "total": "",
+    "critical": "",
+    "high": "",
+    "medium": "",
+    "low": ""
+  }
 }
