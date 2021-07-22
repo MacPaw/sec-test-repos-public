@@ -1,6 +1,6 @@
 {
-  "language": "",
-  "test-state": "",
+  "language": "swift",
+  "test-state": "true",
   "findings": {
     "total": "",
     "critical": "",
