@@ -1,8 +1,8 @@
 {
-  "language": "",
-  "test-state": "",
+  "language": "python",
+  "test-state": "true",
   "findings": {
-    "total": "",
+    "total": "0",
     "critical": "",
     "high": "",
     "medium": "",
