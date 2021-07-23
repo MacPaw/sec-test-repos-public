@@ -1,8 +1,8 @@
 {
-  "language": "",
-  "test-state": "",
+  "language": "javascript",
+  "test-state": "true",
   "findings": {
-    "total": "",
+    "total": "0",
     "critical": "",
     "high": "",
     "medium": "",
