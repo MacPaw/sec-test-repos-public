@@ -1,14 +1,103 @@
-# sec-test-repos
-Set of repositories with vulnerable and non-vulnerable code. Used for testing SSDLC pipelines
+#### GoVWA
+GoVWA (Go Vulnerable Web Application) is a vulnerable web application designed for pentester or programmers to learn the web application vulnerability that often occur in web applications. The vulnerabilities in GoVWA are OWASP Top 10 category. 
 
-### Branch naming
-Branches are named following the next pattern `<scanner_type>_<test_state>`:
-- *scanner_type* - type of scanner to test. Possible params: `javascript|gitleaks|terraform|blackduck`
-- *test_state* - state of the test after scanner run. Possible params: `true|false`
+#### WARNING!
+---
+GoVWA is a vulnerable web application, **Run it only on local environment**
 
-### Test config
-Each branch with test repo contains `projects/config.json` file.
-The file has the following properties:
-- `scanner` - scanner type
-- `test-state` - state of the test
-- `findings` - number of findings scanner should find (0 - for non-vulnerable project)
+#### Installation
+---
+#### Installing golang
+Golang versiong : >= 1.11 
+Installing guide : https://www.digitalocean.com/community/tutorials/how-to-install-go-1-6-on-ubuntu-16-04
+
+#### Setup
+```
+git clone https://github.com/0c34/govwa.git
+
+git pull (to update)
+
+```
+#### Install dependency packages
+
+```
+go mod download 
+```
+
+#### GoVWA config
+---
+#### Modified the config.json file for database configuration
+
+config.json file is located in config directory.
+
+```
+{
+    "user": "root",
+    "password": "root",
+    "dbname": "govwa",
+    "sqlhost": "localhost",
+    "sqlport": "3306",
+    "webserver": "http://localhost",
+    "webport": "8888",
+
+    "sessionkey:": "G0Vw444"
+}
+
+```
+Run GoVWA 
+```
+go run app.go 
+```
+```
+
+     ÛÛÛÛÛÛÛÛÛ           ÛÛÛÛÛ   ÛÛÛÛÛ ÛÛÛÛÛ   ÛÛÛ   ÛÛÛÛÛ   ÛÛÛÛÛÛÛÛÛ  
+    ÛÛÛ°°°°°ÛÛÛ         °°ÛÛÛ   °°ÛÛÛ °°ÛÛÛ   °ÛÛÛ  °°ÛÛÛ   ÛÛÛ°°°°°ÛÛÛ 
+   ÛÛÛ     °°°   ÛÛÛÛÛÛ  °ÛÛÛ    °ÛÛÛ  °ÛÛÛ   °ÛÛÛ   °ÛÛÛ  °ÛÛÛ    °ÛÛÛ 
+  °ÛÛÛ          ÛÛÛ°°ÛÛÛ °ÛÛÛ    °ÛÛÛ  °ÛÛÛ   °ÛÛÛ   °ÛÛÛ  °ÛÛÛÛÛÛÛÛÛÛÛ 
+  °ÛÛÛ    ÛÛÛÛÛ°ÛÛÛ °ÛÛÛ °°ÛÛÛ   ÛÛÛ   °°ÛÛÛ  ÛÛÛÛÛ  ÛÛÛ   °ÛÛÛ°°°°°ÛÛÛ 
+  °°ÛÛÛ  °°ÛÛÛ °ÛÛÛ °ÛÛÛ  °°°ÛÛÛÛÛ°     °°°ÛÛÛÛÛ°ÛÛÛÛÛ°    °ÛÛÛ    °ÛÛÛ 
+   °°ÛÛÛÛÛÛÛÛÛ °°ÛÛÛÛÛÛ     °°ÛÛÛ         °°ÛÛÛ °°ÛÛÛ      ÛÛÛÛÛ   ÛÛÛÛÛ
+     °°°°°°°°°   °°°°°°       °°°           °°°   °°°      °°°°°   °°°°° 
+
+=======
+Server running at port :8082
+Open this URL http://192.168.56.101:8082/ on your browser to access GoVWA
+
+```
+Open the URL to access GoVWA and follow the setup instruction to create database and tables
+
+#### Setup from docker
+```
+git clone https://github.com/0c34/govwa.git
+
+inside govwa directory:
+docker-compose up --build
+
+stop running process using
+docker-compose down --remove-orphans --volumes
+
+```
+
+GoVWA users:
+
+|uname|password|
+|-----|--------|
+|admin|govwaadmin|
+|user1|govwauser1|
+
+Explore the vulnerability.
+
+#### Contributor
+---
+* Khaedir (golang programming)
+* Xaquille (web design)
+
+#### To Do
+
+* add more vulnerabilities
+* ~~XXE Vulnerability~~
+* NoSQLInjection
+* JSON Web API (unprotected API)
+* Build Simple Android APP
+
+Powered by [NemoSecurity](https://nemosecurity.com)
