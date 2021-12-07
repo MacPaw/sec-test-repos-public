@@ -5,7 +5,6 @@ class Weather extends HTMLElement {
   constructor() {
     super();
 
-    this.$shadowRoot = this.attachShadow({mode: 'open'});
     this.$shadowRoot.innerHTML = `
       <style>
       .weather-container {
