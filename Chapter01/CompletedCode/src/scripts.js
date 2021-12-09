@@ -77,7 +77,6 @@ class ToDoClass {
     loadTasks() {
       localStorage.setItem('TASKS', JSON.stringify(this.tasks));
       let tasksHtml = this.tasks.reduce((html, task, index) => html += this.generateTaskHtml(task, index), '');
-      document.getElementById('taskList').innerHTML = tasksHtml;
     }
 }
 
