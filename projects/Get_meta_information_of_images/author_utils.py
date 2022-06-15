@@ -145,18 +145,6 @@ def look_up_account_sid(sid, system_name=None):
         domain, ctypes.byref(cch_domain), ctypes.byref(sid_type))
     return name.value, domain.value, sid_type
 
-def get_file_security(filename, request=_DEFAULT_SECURITY_INFORMATION):
-    # N.B. This query may fail with ERROR_INVALID_FUNCTION
-    # for some filesystems.
-    pSD = PSECURITY_DESCRIPTOR(needs_free=True)
-    error = advapi32.GetNamedSecurityInfoW(filename, SE_FILE_OBJECT, request,
-                ctypes.byref(pSD.pOwner), ctypes.byref(pSD.pGroup),
-                ctypes.byref(pSD.pDacl), ctypes.byref(pSD.pSacl),
-                ctypes.byref(pSD))
-    if error != 0:
-        raise ctypes.WinError(error)
-    return pSD
-
 def get_author(filename):
     if isinstance(filename, bytes):
         if hasattr(os, 'fsdecode'):
