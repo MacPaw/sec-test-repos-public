@@ -2,7 +2,7 @@
   "language": "Go",
   "test-state": "false",
   "findings": {
-    "total": "34",
+    "total": "30",
     "critical": "",
     "high": "",
     "medium": "",
