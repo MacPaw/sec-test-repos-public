@@ -1,8 +1,8 @@
 {
-  "language": "",
-  "test-state": "",
+  "language": "Go",
+  "test-state": "false",
   "findings": {
-    "total": "",
+    "total": "27",
     "critical": "",
     "high": "",
     "medium": "",
